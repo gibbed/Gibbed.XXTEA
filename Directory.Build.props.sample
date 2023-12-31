@@ -1,0 +1,5 @@
+<Project>
+  <PropertyGroup>
+    <GibbedXXTEA_TargetFrameworksToBuild>net5.0</GibbedXXTEA_TargetFrameworksToBuild>
+  </PropertyGroup>
+</Project>

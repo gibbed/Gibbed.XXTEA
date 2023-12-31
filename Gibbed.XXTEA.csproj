@@ -1,10 +1,20 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net40;net45</TargetFrameworks>
     <Company>Gibbed</Company>
     <Authors>Gibbed</Authors>
-    <Description>http://gib.me/</Description>
-    <Copyright>Copyright © Gibbed 2019</Copyright>
+    <Description>https://gib.me/</Description>
+    <Copyright>Copyright © Gibbed 2024</Copyright>
+  </PropertyGroup>
+  <PropertyGroup>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(GibbedXXTEA_TargetFrameworksToBuild)' == '' ">
+    <GibbedXXTEA_TargetFrameworksToBuild>$(TargetFrameworksToBuild)</GibbedXXTEA_TargetFrameworksToBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(GibbedXXTEA_TargetFrameworksToBuild)' == '' ">
+    <TargetFrameworks>netstandard2.0;net40;net45;net472;net48;net5.0</TargetFrameworks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(GibbedXXTEA_TargetFrameworksToBuild)' != '' ">
+    <TargetFrameworks>$(GibbedXXTEA_TargetFrameworksToBuild)</TargetFrameworks>
   </PropertyGroup>
 </Project>
